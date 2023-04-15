@@ -40,7 +40,7 @@ export const CreateRecipe = () => {
   const onSubmit = async(e)=>{
     e.preventDefault()
     try {
-      await axios.post('http://localhost:8000/recipes', recipe, {header:{authorization:cookies.access_token}})
+      await axios.post('https://recipe-blog-five.vercel.app/recipes', recipe, {header:{authorization:cookies.access_token}})
       alert('Recipe Created')
       navigate('/')
     } catch (err) {
