@@ -11,7 +11,7 @@ export const SavedRecipe = () => {
 
     const fetchSavedRecipe = async()=>{
       try {
-        const response = await axios.get(`https://recipe-blog-five-3cvzmemal-abhay-singh1.vercel.app/recipes/savedrecipes/${userID}`)
+        const response = await axios.get(`https://recipe-blog-five-fjn39you5-abhay-singh1.vercel.app/recipes/savedrecipes/${userID}`)
         setSavedRecipe(response.data.savedRecipes)
         console.log(response.data)
       } catch (err) {

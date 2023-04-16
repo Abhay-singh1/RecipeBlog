@@ -14,7 +14,7 @@ export const Home = () => {
   useEffect(()=>{
     const getRecipe = async()=>{
       try {
-      const response = await axios.get('https://recipe-blog-five-3cvzmemal-abhay-singh1.vercel.app/recipes')
+      const response = await axios.get('https://recipe-blog-five-fjn39you5-abhay-singh1.vercel.app/recipes')
       setRecipe(response.data)
     } catch (err) {
       console.error(err)
@@ -23,7 +23,7 @@ export const Home = () => {
 
     const fetchSavedRecipe = async()=>{
       try {
-        const response = await axios.get(`https://recipe-blog-five-3cvzmemal-abhay-singh1.vercel.app/recipes/savedrecipes/ids/${userID}`)
+        const response = await axios.get(`https://recipe-blog-five-fjn39you5-abhay-singh1.vercel.app/recipes/savedrecipes/ids/${userID}`)
         setSavedRecipe(response.data.savedRecipes)
         console.log(response.data)
       } catch (err) {
@@ -36,7 +36,7 @@ export const Home = () => {
 
   const saveRecipe =async(recipeID)=>{
     try {
-      const response = await axios.put('https://recipe-blog-five-3cvzmemal-abhay-singh1.vercel.app/recipes',{recipeID, userID},{headers:{authorization: cookies.access_token}})
+      const response = await axios.put('https://recipe-blog-five-fjn39you5-abhay-singh1.vercel.app/recipes',{recipeID, userID},{headers:{authorization: cookies.access_token}})
       setSavedRecipe(response.data.savedRecipes)
       console.log(response)
     } catch (err) {
