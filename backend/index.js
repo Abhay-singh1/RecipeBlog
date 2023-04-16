@@ -9,7 +9,7 @@ app.use(express.json())
 app.use(cors())
 
 app.use('/auth', userRouter)
-app.use('/recipes', recipeRouter)
+app.use('/recipes', recipeRouters)
 
 mongoose.connect("mongodb+srv://Abhay1:Abhay1@cluster0.z3xw7.mongodb.net/recipes?retryWrites=true&w=majority")
 const PORT = 8000
