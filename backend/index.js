@@ -1,14 +1,13 @@
 const express = require('express')
 const cors = require('cors')
 const mongoose = require('mongoose')
-const userRouter = require("./Routes/users")
-const recipeRouter = require("./Routes/Recipe")
+const userRouter = require("./src/Routes/users")
+const recipeRouter = require("./src/Routes/Recipe")
 const app = express()
 
 app.use(express.json())
-app.use(cors({
-    origin:'https://recipe-blog-fullstack.vercel.app/'
-}))
+app.use(cors())
+
 app.use('/auth', userRouter)
 app.use('/recipes', recipeRouter)
 
