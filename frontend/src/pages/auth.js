@@ -25,7 +25,7 @@ const Login =()=>{
   const handleSubmit = async(e)=>{
     e.preventDefault()
    try {
-      const response = await axios.post('https://recipe-blog-five-3cvzmemal-abhay-singh1.vercel.app//auth/login',{
+      const response = await axios.post('https://recipe-blog-five-3cvzmemal-abhay-singh1.vercel.app/auth/login',{
         username,
         password
       })
@@ -66,7 +66,7 @@ const Register =()=>{
   const handleSubmit = async(e)=>{
      e.preventDefault()
     try {
-      await axios.post('https://recipe-blog-five-3cvzmemal-abhay-singh1.vercel.app//auth/register',{
+      await axios.post('https://recipe-blog-five-3cvzmemal-abhay-singh1.vercel.app/auth/register',{
         username,
         password
       })
