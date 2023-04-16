@@ -16,7 +16,7 @@ router.get('/', async(req,res)=>{
 })
 
 
-router.post('/', verifyToken, async(req, res)=>{
+router.post('/', async(req, res)=>{
     const recipe = new RecipeModel(req.body)
     try {
         const response = await recipe.save()
@@ -27,7 +27,7 @@ router.post('/', verifyToken, async(req, res)=>{
 })
 
 
-router.put('/', verifyToken, async(req,res)=>{
+router.put('/',async(req,res)=>{
     
     try {
         const recipe = await RecipeModel.findById(req.body.recipeID)
@@ -49,7 +49,7 @@ router.get('/savedrecipes/ids/:userID', async(req, res)=>{
         console.error(err)
     }
 })
-router.get('/savedrecipes/:userID', verifyToken, async(req, res)=>{
+router.get('/savedrecipes/:userID', async(req, res)=>{
     try {
         const user = await UserModel.findById(req.params.userID)
         const savedRecipes = await RecipeModel.find({
