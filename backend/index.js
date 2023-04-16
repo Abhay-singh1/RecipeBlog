@@ -1,8 +1,8 @@
 const express = require('express')
 const cors = require('cors')
 const mongoose = require('mongoose')
-const userRouter = require("./Routes/users")
-const recipeRouters = require("./Routes/Recipe")
+const userRouter = require("./src/Routes/users")
+const recipeRouters = require("./src/Routes/Recipe")
 const app = express()
 
 app.use(express.json())
