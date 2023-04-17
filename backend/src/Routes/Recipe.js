@@ -2,7 +2,7 @@ const RecipeModel = require('../Models/Recipe')
 const UserModel = require('../Models/Users') 
 const express = require('express')
 const mongoose = require('mongoose')
-const verifyToken = require('./users')
+// const verifyToken = require('./users')
 
 const router = express()
 
